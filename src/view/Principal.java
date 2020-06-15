@@ -12,8 +12,8 @@ public class Principal {
 	public static void main(String[] args) {
 		
 		IArquivosController arqCont = new ArquivosController();
-		String dirWin = "C:\\Windows";
-		String path = "C:\\temp\\Aula";
+		String dirWin = "C:\\temp";//pasta que ele vai ler
+		String path = "C:\\temp"; //pasta que ele vai ler e criar o arquivo
 		//String name = "teste.csv"; //criar arquivo .csv
 		//String name = "temp";
 		String name = JOptionPane.showInputDialog(null, "Digite o nome do arquivo com extenção: ",

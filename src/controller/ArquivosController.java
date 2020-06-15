@@ -62,7 +62,7 @@ public class ArquivosController implements IArquivosController{
 		StringBuffer buffer = new StringBuffer();
 		String linha = "";
 		while (!linha.equalsIgnoreCase("fim")) { //enquanto a linha não for "fim" faça
-			linha = JOptionPane.showInputDialog(null,"Digite uma frase",
+			linha = JOptionPane.showInputDialog(null,"Digite uma frase (digite 'fim' para terminar)",
 					"Entrada de texto", JOptionPane.INFORMATION_MESSAGE);
 			if (!linha.equalsIgnoreCase("fim")) {
 				buffer.append(linha+"\r\n");
