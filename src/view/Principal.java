@@ -12,10 +12,8 @@ public class Principal {
 	public static void main(String[] args) {
 		
 		IArquivosController arqCont = new ArquivosController();
-		String dirWin = "C:\\temp";//pasta que ele vai ler
-		String path = "C:\\temp"; //pasta que ele vai ler e criar o arquivo
-		//String name = "teste.csv"; //criar arquivo .csv
-		//String name = "temp";
+		String path = JOptionPane.showInputDialog(null, "Digite o diretório de trabalho: ",
+				"Entrada de texto", JOptionPane.INFORMATION_MESSAGE); //pasta que ele vai ler e criar o arquivo
 		String name = JOptionPane.showInputDialog(null, "Digite o nome do arquivo com extenção: ",
 				"Entrada de texto", JOptionPane.INFORMATION_MESSAGE);
 		
@@ -23,9 +21,9 @@ public class Principal {
 			int opc=0;
 
 			while(opc!=9) {
-				opc = Integer.parseInt(JOptionPane.showInputDialog("1 - Ler diretório "+dirWin+"\n2- Cria Arquivo  \n3 - Lê arquivos  \n4 - Abre arquivo  \n9 - Finalizar"));
+				opc = Integer.parseInt(JOptionPane.showInputDialog("1 - Ler diretório "+path+"\n2- Cria Arquivo  \n3 - Lê arquivos  \n4 - Abre arquivo  \n9 - Finalizar"));
 				switch (opc){
-		    		case 1: arqCont.readDir(dirWin);
+		    		case 1: arqCont.readDir(path);
 		    			break;
 		    		case 2: arqCont.createFile(path, name);
 		    			break;

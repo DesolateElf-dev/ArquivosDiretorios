@@ -16,6 +16,8 @@ public class ArquivosController implements IArquivosController{
 	public ArquivosController() {
 		super();
 	}
+	
+	
 
 	@Override
 	public void readDir(String path) throws IOException {
