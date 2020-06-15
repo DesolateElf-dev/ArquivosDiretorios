@@ -16,8 +16,6 @@ public class ArquivosController implements IArquivosController{
 	public ArquivosController() {
 		super();
 	}
-	
-	
 
 	@Override
 	public void readDir(String path) throws IOException {
@@ -67,7 +65,7 @@ public class ArquivosController implements IArquivosController{
 			linha = JOptionPane.showInputDialog(null,"Digite uma frase (digite 'fim' para terminar)",
 					"Entrada de texto", JOptionPane.INFORMATION_MESSAGE);
 			if (!linha.equalsIgnoreCase("fim")) {
-				buffer.append(linha+"\r\n");
+				buffer.append(linha+"\r\n"); //\n de pular linha \r de Return (enter)
 			}
 		}
 		return buffer.toString();
@@ -80,7 +78,7 @@ public class ArquivosController implements IArquivosController{
 			FileInputStream fluxo = new FileInputStream(arq); //abre o arquivo
 			InputStreamReader leitor = new InputStreamReader(fluxo); //lê o arquivo
 			BufferedReader buffer = new BufferedReader(leitor); //converte o arquivo
-			String linha = buffer.readLine(); //coloca o arquivo no buffer
+			String linha = buffer.readLine();
 			//faz as operações
 			while (linha != null) { //procura EOF (fim do arquivo)
 				System.out.println(linha);
